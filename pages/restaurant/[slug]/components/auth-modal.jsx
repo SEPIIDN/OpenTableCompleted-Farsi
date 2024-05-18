@@ -97,7 +97,7 @@ export default function AuthModal({ isSignIn }) {
         className={`${renderCondition(
           'bg-red-600 mr-3',
           ''
-        )}border p-1 px-4 rounded text-white text-base hover:bg-white hover:text-black`}
+        )}border p-1 px-4 rounded text-white font-bold text-base text-md hover:bg-white hover:text-black`}
         onClick={() => handleOpen()}
       >
         {renderCondition('ورود', 'ثبت نام')}

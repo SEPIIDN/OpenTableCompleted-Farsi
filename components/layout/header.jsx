@@ -18,7 +18,7 @@ export default function Header() {
             <div className='flex'>
               {data ? (
                 <button
-                  className='bg-red-600 text-white text-center mr-3 border p-1 px-4 rounded'
+                  className='bg-red-600 text-white font-bold text-center mr-3 border p-1 px-4 rounded'
                   onClick={signout}
                 >
                   خروج

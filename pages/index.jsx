@@ -8,7 +8,7 @@ export default function Home({ restaurants }) {
   return (
     <main className='bg-gray-100 min-h-screen w-fit'>
       <PageTitle />
-      <div className='py-3 px-40 mt-10 flex flex-wrap justify-center items-center'>
+      <div className='py-3 px-40 mt-10 flex flex-wrap justify-center flex-row-reverse items-center'>
         {restaurants ? (
           restaurants
             .sort((a, b) => b.rating - a.rating)

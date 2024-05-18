@@ -12,7 +12,7 @@ export default function RestaurantCard({
   location,
 }) {
   return (
-    <div className='rtl w-1/4 h-72 m-3 rounded overflow-hidden border cursor-pointer'>
+    <div className='rtl w-1/4 h-72 m-3 rounded overflow-hidden border cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-1 duration-300'>
       <Link href={`/restaurant/${slug}`}>
         <img
           src={main_image}

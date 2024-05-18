@@ -8,7 +8,7 @@ export default function RestaurantSearch() {
   return (
     <div className='text-left text-lg py-3 m-auto flex justify-center'>
       <button
-        className='rounded bg-red-600 px-9 py-2 text-white'
+        className='rounded bg-red-600 px-9 py-2 text-white hover:bg-white hover:text-red-600 duration-[350ms]'
         onClick={() => {
           router.push(`/search?city=${location}`);
           setLocation('');

@@ -9,7 +9,9 @@ export default function SideBar({
   return (
     <div className='rtl w-1/5'>
       <div className='flex flex-col border-b pb-4'>
-        <h1 className='mb-2'>استان</h1>
+        <h1 className='mb-2 p-2 bg-red-600 text-white rounded'>
+          استان
+        </h1>
         {locations.map((location) => (
           <Link
             href={{
@@ -19,7 +21,7 @@ export default function SideBar({
                 city: location.name,
               },
             }}
-            className='font-light text-reg capitalize'
+            className='font-light text-reg capitalize p-2 hover:bg-red-300 duration-150'
             key={location.id}
           >
             {location.name}
@@ -27,7 +29,9 @@ export default function SideBar({
         ))}
       </div>
       <div className='flex flex-col border-b pb-4 mt-3'>
-        <h1 className='mb-2'>مدل غذا</h1>
+        <h1 className='mb-2 p-2 bg-red-600 text-white rounded'>
+          مدل غذا
+        </h1>
         {cuisines.map((cuisine) => (
           <Link
             href={{
@@ -37,7 +41,7 @@ export default function SideBar({
                 cuisine: cuisine.name,
               },
             }}
-            className='font-light text-reg capitalize'
+            className='font-light text-reg capitalize p-2 hover:bg-red-300 duration-150'
             key={cuisine.id}
           >
             {cuisine.name}
@@ -45,7 +49,9 @@ export default function SideBar({
         ))}
       </div>
       <div className='mt-3 pb-4'>
-        <h1 className='mb-2'>قیمت</h1>
+        <h1 className='mb-2 p-2 bg-red-600 text-white rounded'>
+          قیمت
+        </h1>
         <div className='flex'>
           <Link
             href={{
@@ -55,7 +61,7 @@ export default function SideBar({
                 price: PRICE.CHEAP,
               },
             }}
-            className='border w-full text-reg font-light rounded-l p-2'
+            className='border w-full text-reg font-light rounded-l p-2 hover:bg-red-300 duration-150'
           >
             $
           </Link>
@@ -67,7 +73,7 @@ export default function SideBar({
                 price: PRICE.REGULAR,
               },
             }}
-            className='border-r border-t border-b w-full text-reg font-light p-2'
+            className='border-r border-t border-b w-full text-reg font-light p-2 hover:bg-red-300 duration-150'
           >
             $$
           </Link>
@@ -79,7 +85,7 @@ export default function SideBar({
                 price: PRICE.EXPENSIVE,
               },
             }}
-            className='border-r border-t border-b w-full text-reg font-light p-2 rounded-r'
+            className='border-r border-t border-b w-full text-reg font-light p-2 rounded-r hover:bg-red-300 duration-150'
           >
             $$$
           </Link>
