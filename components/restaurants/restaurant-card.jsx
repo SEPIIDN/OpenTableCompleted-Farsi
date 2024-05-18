@@ -36,9 +36,6 @@ export default function RestaurantCard({
               {location.name}
             </p>
           </div>
-          {/* <p className='text-sm mt-1 font-bold'>
-            Booked 3 times today
-          </p> */}
         </div>
       </Link>
     </div>

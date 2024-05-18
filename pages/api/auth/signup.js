@@ -17,35 +17,35 @@ export default async function handler(req, res) {
                 min: 1,
                 max: 20
             }),
-            errorMessage: 'First Name Is Invalid'
+            errorMessage: 'نام غیرقابل قبول!'
         },
         {
             valid: validator.isLength(lastName, {
                 min: 1,
                 max: 20
             }),
-            errorMessage: 'Last Name Is Invalid'
+            errorMessage: 'نام خانوادگی غیرقابل قبول!'
         },
         {
             valid: validator.isEmail(email),
-            errorMessage: 'Email Is Invalid'
+            errorMessage: 'پست الکترونیکی غیرقابل قبول!'
         },
         {
             valid: validator.isMobilePhone(phone),
-            errorMessage: 'Phone Number Is Invalid'
+            errorMessage: 'شماره تلفن غیرقابل قبول!'
         },
         {
             valid: validator.isLength(city, {
                 min: 1,
             }),
-            errorMessage: 'City Is Invalid'
+            errorMessage: 'شهر غیرقابل قبول'
         },
         {
             valid: validator.isStrongPassword(password, {
                 min: 1,
                 max: 20
             }),
-            errorMessage: 'Weak Password'
+            errorMessage: 'کلمه عبور شما ضعیف است!'
         }
         ];
 
@@ -65,7 +65,7 @@ export default async function handler(req, res) {
         })
 
         if (userByEmail) {
-            return res.status(400).json({ errorMessage: 'This Email Has Already Been Used!' })
+            return res.status(400).json({ errorMessage: 'پست الکترونیکی تکراری میباشد!' })
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);

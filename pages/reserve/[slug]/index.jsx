@@ -20,7 +20,11 @@ export default function Reserve({ restaurant }) {
             date={router.query.date}
             partySize={router.query.partySize}
           />
-          <ReservationForm />
+          <ReservationForm
+            date={router.query.date}
+            slug={router.query.slug}
+            partySize={router.query.partySize}
+          />
         </div>
       </div>
     </Fragment>

@@ -14,13 +14,13 @@ export default async function handler(req, res) {
         const validateSchema = [
             {
                 valid: validator.isEmail(email),
-                errorMessage: 'Email Is Invalid'
+                errorMessage: 'پست الکترونیکی غیرقابل قبول!'
             },
             {
                 valid: validator.isLength(password, {
                     min: 1
                 }),
-                errorMessage: 'Password Is Invalid'
+                errorMessage: 'کلمه عبور اشتباه است!'
             }
         ]
         validateSchema.forEach((check) => {
@@ -38,12 +38,12 @@ export default async function handler(req, res) {
             }
         })
         if (!user) {
-            return res.status(401).json({ errorMessage: 'Invalid Email Or Password' })
+            return res.status(401).json({ errorMessage: 'رمز عبور یا پست الکترونیکی اشتباه میباشد!' })
         }
 
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            return res.status(401).json({ errorMessage: 'Invalid Email Or Password' })
+            return res.status(401).json({ errorMessage: 'رمز عبور یا پست الکترونیکی اشتباه میباشد!' })
         }
 
         const alg = "HS256";

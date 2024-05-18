@@ -70,7 +70,7 @@ export default function RestaurantReservation({
     <div className='rtl fixed w-[25%] bottom-7 bg-white rounded p-3 shadow my-3'>
       <div className='text-center border-b pb-2 font-bold'>
         <h4 className='mr-7 text-lg'>
-          میز خود را رزرو کنید {time}
+          میز خود را رزرو کنید{' '}
         </h4>
       </div>
       <div className='my-3 flex flex-col'>
@@ -155,7 +155,7 @@ export default function RestaurantReservation({
                   </p>
                 </Link>
               ) : (
-                <div className='bg-gray-300 p-2 w-24 mb-3 rounded ml-3'></div>
+                <div className='cursor-not-allowed bg-gray-300 p-2 w-24 mb-3 rounded ml-3'></div>
               );
             })}
           </div>

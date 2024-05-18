@@ -38,14 +38,14 @@ export default function Search({
           </div>
         ) : (
           <div
-            className='flex-1 bg-red-100 rounded-lg p-4 mb-4 text-lg font-bold text-red-700'
+            className='rtl ml-5 flex-1 bg-red-100 rounded-lg p-4 mb-4 text-lg font-bold text-red-700'
             role='alert'
           >
             <div>
               <span className='font-bold'>
                 با عرض پوزش!
               </span>{' '}
-              صفحه مورد نظر یافت نشد! جستجو
+              صفحه مورد نظر یافت نشد!
             </div>
           </div>
         )}
